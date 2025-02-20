@@ -1,0 +1,3 @@
+packages:
+  - '.'
+shamefully-flatten: true
