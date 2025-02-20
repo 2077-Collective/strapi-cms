@@ -8,11 +8,11 @@ module.exports = [
   {
     name: 'strapi::body',
     config: {
-      formLimit: '50mb', // Increase form payload size limit
-      jsonLimit: '50mb', // Increase JSON payload size limit
-      textLimit: '50mb', // Increase text payload size limit
+      formLimit: '256mb',
+      jsonLimit: '256mb',
+      textLimit: '256mb',
       formidable: {
-        maxFileSize: 200 * 1024 * 1024, // Increase file size limit (e.g., 200MB)
+        maxFileSize: 200 * 1024 * 1024,
       },
     },
   },
@@ -22,8 +22,8 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,  
         directives: {
-          "script-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "https:"],
-          "connect-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "blob:", "*.strapi.io"],
+          "script-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "https:", "'unsafe-inline'"],
+          "connect-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "blob:", "*.strapi.io", "https:"],
           "img-src": [
             "'self'",
             "*.tinymce.com",
@@ -34,14 +34,21 @@ module.exports = [
             "strapi.io",
             "s3.amazonaws.com",
             "cdn.jsdelivr.net",
+            "http:",
+            "https:",
+            "*.cloudinary.com",
+            "*"
           ],
+          "media-src": ["'self'", "data:", "blob:", "https:", "*"],
           "style-src": [
             "'self'",
             "'unsafe-inline'",
             "*.tinymce.com",
             "*.tiny.cloud",
+            "https:"
           ],
-          "font-src": ["'self'", "*.tinymce.com", "*.tiny.cloud"],
+          "font-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "https:", "data:"],
+          "frame-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "https:"],
         },
         upgradeInsecureRequests: null,
       },
