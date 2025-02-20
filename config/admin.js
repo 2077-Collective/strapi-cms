@@ -14,4 +14,28 @@ module.exports = ({ env }) => ({
     nps: env.bool('FLAG_NPS', true),
     promoteEE: env.bool('FLAG_PROMOTE_EE', true),
   },
+  build: {
+    config: {
+      plugins: {
+        vite: {
+          build: {
+            rollupOptions: {
+              external: [
+                '@strapi/design-system/v2',
+                '@strapi/design-system',
+                '@strapi/icons',
+                '@strapi/helper-plugin'
+              ]
+            }
+          },
+          resolve: {
+            alias: {
+              '@strapi/design-system/v2': '@strapi/design-system',
+              '@strapi/design-system': '@strapi/design-system'
+            }
+          }
+        }
+      }
+    }
+  }
 });

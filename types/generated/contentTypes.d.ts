@@ -415,6 +415,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       'api::category.category'
     >;
     content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'> &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 10000000;
       }>;
