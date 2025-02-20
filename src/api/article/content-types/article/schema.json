@@ -58,8 +58,12 @@
       "type": "boolean"
     },
     "content": {
+<<<<<<< HEAD
       "type": "customField",
       "customField": "plugin::tinymce.tinymce",
+=======
+      "type": "richtext",
+>>>>>>> b14e4271080edaad35aee0b149f95f115be44650
       "maxLength": 10000000
     },
     "gpt_summary": {

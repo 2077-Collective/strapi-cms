@@ -16,6 +16,7 @@ module.exports = [
       },
     },
   },
+<<<<<<< HEAD
   {
     name: "strapi::security",
     config: {
@@ -51,3 +52,9 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
+=======
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
+];
+>>>>>>> b14e4271080edaad35aee0b149f95f115be44650

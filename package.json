@@ -13,7 +13,6 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-react": "^9.5.0",
     "@sklinet/strapi-plugin-tinymce": "^1.1.6",
     "@strapi/design-system": "2.0.0-rc.16",
     "@strapi/helper-plugin": "4.19.0",
@@ -31,6 +30,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.29.0",
+    "strapi-import-export": "^0.0.1",
     "styled-components": "^6.0.0"
   },
   "resolutions": {
@@ -46,11 +46,11 @@
     "uuid": "6a67739d-dc13-4214-a8aa-fd861903e599"
   },
   "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@formatjs/ts-transformer": "^3.13.32",
     "babel-plugin-formatjs": "^10.5.35"
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
